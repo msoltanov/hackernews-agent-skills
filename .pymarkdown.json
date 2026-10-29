@@ -1,0 +1,19 @@
+{
+  "extensions": {
+    "front-matter": {"enabled": true},
+    "markdown-tables": {"enabled": true},
+    "markdown-task-list-items": {"enabled": true}
+  },
+  "plugins": {
+    "md003": {"style": "atx"},
+    "md004": {"style": "dash"},
+    "md007": {"indent": 2},
+    "md013": {"enabled": false},
+    "md014": {"enabled": false},
+    "md025": {"level": 1},
+    "md029": {"style": "one_or_ordered"},
+    "md033": {"allowed_elements": "details,summary,sub,sup,picture,br"},
+    "md046": {"style": "fenced"},
+    "md048": {"style": "backtick"}
+  }
+}

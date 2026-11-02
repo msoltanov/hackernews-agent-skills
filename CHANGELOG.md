@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.6
+
+- The plugin is now `hn-agent-skills`.
+  The directory held `hn-research-skills` as too close to an existing listing.
+  Reinstall it with `/plugin install hn-agent-skills@hackernews-agent-skills`.
+
 ## v1.0.5
 
 - The plugin is now `hn-research-skills`, so its name differs clearly from other directory listings.

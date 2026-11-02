@@ -42,6 +42,7 @@ python -m pyright
 python -m pymarkdown --config .pymarkdown.json scan --recurse --exclude .venv .
 python -m yamllint --strict -c .yamllint.yaml .github/workflows/ci.yml .github/workflows/release.yml .yamllint.yaml
 python scripts/validate_skills.py
+python scripts/check_versions.py
 python -m unittest discover -s scripts -p 'test_*.py' -v
 python -m unittest discover -s skills/hn-discover/scripts -p 'test_*.py' -v
 python -m unittest discover -s skills/hn-comment-suggest/scripts -p 'test_*.py' -v
@@ -99,6 +100,8 @@ Maintainers make releases from `main`.
 5. Push a tag with the same version, for example `v1.0.0`.
 
 The tag starts the release workflow.
+The workflow stops if the tag does not match the version in every file.
+Run `python scripts/check_versions.py --tag v1.0.0` with your tag before you push it.
 The workflow builds the skill zips and attaches them to a GitHub release.
 Do not change a tag after you push it.
 

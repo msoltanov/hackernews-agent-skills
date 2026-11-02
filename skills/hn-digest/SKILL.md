@@ -33,6 +33,8 @@ Do not invent sources, HN matches, comments, dates, or current account and threa
 4. Select relevant links from `newest`, `best`, `active`, `shownew`, `asknew`, `bestcomments`, `highlights`, and `pool`.
 5. Distinguish submission, publication, and update dates.
 6. Check each story against its original source.
+   If web fetch refuses an article URL, search for the article title and fetch the URL from the search result.
+   If that also fails, ask the user to paste the article text or URL, and mark the story unverified.
 7. If you describe reader responses, read the discussion.
 8. Separate article claims, individual opinions, and independently supported facts.
 9. Rank informational value, novelty, evidence quality, and technical relevance.

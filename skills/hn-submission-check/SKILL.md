@@ -72,7 +72,14 @@ The human makes all edits and performs all account actions.
 
 ## Return
 
-`Decision: Ready for human consideration / Needs human revision / Not a fit`
+`Decision: Ready for human consideration / Needs human revision / Not a fit / Already live`
+
+Use `Already live` when the item is already on HN.
+Then run the checks as a review of the live item.
+Ask whether the user is the author.
+Do not state edit or deletion windows unless you check the current FAQ.
+Never recommend deletion followed by reposting.
+Do not use any other decision label.
 
 Include `Type`, `Criteria checked`, `Issues`, `What the human must decide`, and `Sources`.
 Do not publish or supply text for direct publication.

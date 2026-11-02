@@ -28,7 +28,9 @@ Do not invent sources, HN matches, comments, dates, or current account and threa
 
 ## Diagnostic order
 
-1. Obtain the exact item URLs and account name from the user or current public pages.
+1. Obtain the exact account name and item URLs from the user.
+   If the user gives no account name, ask for it before any read.
+   Do not guess the account from search results or similar names.
 2. Check that the account matches the target.
 3. Inspect the public profile and a modest sample of recent submissions and comments.
 4. Distinguish the labels below.
@@ -42,11 +44,20 @@ The human writes and sends it.
 
 ## Optional public reads
 
-If `hn-discover` is installed, run its optional helper from that skill's directory:
-`python scripts/hn_readonly.py user <username>`.
-Otherwise, read the public profile or the [official API][api].
-The public user endpoint is `https://hacker-news.firebaseio.com/v0/user/<username>.json`.
-Item endpoints provide the associated records.
+Read the [official API][api] before the HN website.
+Frequent website requests can trigger rate limits.
+
+1. If `hn-discover` is installed, run its helper from the directory that contains its `SKILL.md`:
+   `python scripts/hn_readonly.py user <username> --limit 10`.
+   On claude.ai, installed skills are usually under `/mnt/skills/`.
+2. If the helper is not available, read the API with code execution, not web fetch.
+   On claude.ai, the allowed-domains setting applies to code execution only.
+   The user endpoint is `https://hacker-news.firebaseio.com/v0/user/<username>.json`.
+   The item endpoint is `https://hacker-news.firebaseio.com/v0/item/<id>.json`.
+3. Read the HN website only if the API is unavailable.
+
+If a read fails, report the exact error and the method that failed.
+Item records show `dead` and `deleted` fields, but they do not show flags.
 API data cannot answer every moderation question.
 
 ## Labels and mechanics

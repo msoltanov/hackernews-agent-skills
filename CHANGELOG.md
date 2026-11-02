@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.0.3
+
+- `hn-account-health` asks for the account name and does not guess it from search results.
+- `hn-account-health` reads the HN API through its helper or code execution before the rate-limited website.
+- `hn-account-health` reports the exact error and method for a failed read.
+- `hn-comment-suggest` writes angles as topic notes, not questions addressed to HN readers.
+- `hn-comment-suggest` links earlier threads and does not cite commenters by username alone.
+- `hn-comment-suggest` uses its helper for thread reads and does not retry a rate-limited website.
+- `hn-source-review` always reports prior discussion and the search method.
+- `hn-source-review` does not treat age alone as a reason against a source.
+- `hn-source-review` links each related fact outside the source, or leaves it out.
+- `hn-submission-check` has an `Already live` decision for items already on HN and no other undeclared labels.
+
 ## v1.0.2
 
 - `hn-discover` runs its helper from the skill directory, not the working directory.

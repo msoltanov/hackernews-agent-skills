@@ -7,10 +7,10 @@
   },
   "plugins": [
     {
-      "name": "hn-research-skills",
+      "name": "hn-agent-skills",
       "source": "./",
       "description": "Seven read-only Agent Skills for Hacker News research. No AI-written HN text.",
-      "version": "1.0.5",
+      "version": "1.0.6",
       "category": "productivity",
       "tags": [
         "hacker-news",

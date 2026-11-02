@@ -157,7 +157,7 @@ Development tools do not add runtime dependencies to the helpers.
 ## Contributing and publication
 
 Run the offline tests and metadata checks before submitting changes.
-See [Contributing](CONTRIBUTING.md) and [Security](SECURITY.md).
+See [Contributing](CONTRIBUTING.md), [Security](SECURITY.md), and [Privacy](PRIVACY.md).
 CI runs the offline checks on Python 3.10 and 3.13 without HN access.
 The [manual behavior cases](evals/behavior-cases.md) assess skill responses and standalone installation.
 CI does not run these agent evaluations.

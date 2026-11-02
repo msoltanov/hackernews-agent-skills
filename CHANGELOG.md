@@ -2,6 +2,9 @@
 
 ## v1.0.0
 
+- The plugin has an icon, a privacy policy, and support and documentation links.
+- The security policy defines supported versions, scope, and report contents.
+- The contribution guide describes packaging checks and the release procedure.
 - The repository is a Claude Code plugin marketplace with the `hn-research` plugin.
 - `scripts/build_skill_zips.py` builds one claude.ai upload zip per skill.
 - A tag workflow attaches the zips to a GitHub release.

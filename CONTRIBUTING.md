@@ -73,10 +73,39 @@ Include a short result summary in the pull request.
 10. Do not add generated HN comments or submissions for publication.
 11. Distinguish public observations and moderation inferences from official policy.
 
+## Packaging checks
+
+Run these checks when you change skill metadata, manifests, or packaging:
+
+```sh
+python scripts/build_skill_zips.py
+claude plugin validate . --strict
+claude plugin validate .claude-plugin/marketplace.json --strict
+```
+
+The zip build writes one claude.ai upload zip per skill to `dist/`.
+Each skill description must have 200 characters or less.
+The plugin icon is `assets/icon.png`, a square PNG of 1024 pixels.
+
+## Releases
+
+Maintainers make releases from `main`.
+
+1. Update the version in `.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json`.
+2. Update the version in `README.md`.
+3. Add the changes to `CHANGELOG.md`.
+4. Merge these changes into `main`.
+5. Push a tag with the same version, for example `v1.0.0`.
+
+The tag starts the release workflow.
+The workflow builds the skill zips and attaches them to a GitHub release.
+Do not change a tag after you push it.
+
 ## Issues
 
 Include public item IDs, expected behavior, observed behavior, and reproduction steps.
 Do not share passwords, session cookies, API tokens, private messages, or unpublished personal data.
+Report vulnerabilities privately as [Security](SECURITY.md) describes.
 
 ## License
 

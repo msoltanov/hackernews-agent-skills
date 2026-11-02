@@ -8,6 +8,9 @@
 - `hn-comment-suggest` writes angles as topic notes, not questions addressed to HN readers.
 - `hn-comment-suggest` links earlier threads and does not cite commenters by username alone.
 - `hn-comment-suggest` uses its helper for thread reads and does not retry a rate-limited website.
+- `hn-source-review` always reports prior discussion and the search method.
+- `hn-source-review` does not treat age alone as a reason against a source.
+- `hn-source-review` links each related fact outside the source, or leaves it out.
 
 ## v1.0.2
 

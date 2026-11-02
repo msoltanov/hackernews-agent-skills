@@ -35,11 +35,15 @@ Do not invent sources, HN matches, comments, dates, or current account and threa
 7. Assess what the source teaches readers and whether it fits technical, scientific, or intellectual curiosity.
 8. Distinguish useful material from marketing or outrage.
 9. Check prior HN discussions and dates.
+   Search the source domain and the title.
+   Report the search method, because no search proves that no discussion exists.
 10. For technical work, inspect changes, benchmarks, sample sizes, limitations, and reproducibility.
 11. Cite authoritative sources and state what you cannot check.
 12. If the source is a video or PDF, flag the required `[video]` or `[pdf]` title indicator.
 
 Mainstream stories can qualify through interesting wider phenomena.
+Age alone does not make a source unsuitable.
+Assess an older source on what it still teaches.
 Do not assume that all such stories are off-topic.
 
 The [HN FAQ][faq] permits a small number of reposts after roughly a year without significant attention.
@@ -53,7 +57,11 @@ Do not manufacture a title.
 - Original source: URL, author, and date, where checked.
 - Evidence ledger: claim, evidence, status, and caveat.
 - Prior discussion: HN links, dates, and evidence of substantial attention.
+  Always include this section. If you found nothing, state the search method.
 - Human decision points: facts that the user must check before posting.
+
+Give a link for each related fact outside the source.
+If you cannot link a fact, leave it out.
 
 Never produce a title, introductory comment, or submission for direct publication.
 See the [HN Welcome page][welcome].

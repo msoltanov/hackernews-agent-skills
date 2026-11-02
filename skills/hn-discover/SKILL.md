@@ -52,7 +52,9 @@ Use these list types:
 - `whoishiring` for the monthly hiring thread, `jobs` for job posts, and `launches` for YC launches.
 - `leaders` and `topcolors` only if relevant to the request.
 
-If a command line or code execution is available, run the helper from this skill directory:
+If a command line or code execution is available, run the helper from this skill directory.
+This is the directory that contains this `SKILL.md`, not the working directory.
+On claude.ai, it is usually under `/mnt/skills/`.
 
 ```sh
 python scripts/hn_readonly.py feed --list new --limit 12

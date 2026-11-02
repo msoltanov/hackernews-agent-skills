@@ -22,6 +22,10 @@ jobs:
           python-version: "3.13"
       - name: Validate skill metadata
         run: python scripts/validate_skills.py
+      - name: Check release versions against the tag
+        env:
+          TAG: "${{ github.ref_name }}"
+        run: python scripts/check_versions.py --tag "$TAG"
       - name: Build skill zips
         run: python scripts/build_skill_zips.py --output dist
       - name: Publish GitHub release

@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.0.2
+
+- `hn-discover` runs its helper from the skill directory, not the working directory.
+- The README gives the claude.ai settings that allow the HN API domain.
+
 ## v1.0.1
 
 - `hn-discover` reads live HN lists before web search for a recent time window.

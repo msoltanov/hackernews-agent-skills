@@ -1,6 +1,6 @@
 # Hacker News Agent Skills
 
-Version: `v1.0.1`.
+Version: `v1.0.2`.
 
 Seven Agent Skills support Hacker News research through public information.
 They find discussions, check sources, assess submissions, identify comment angles, and examine account visibility.
@@ -64,8 +64,14 @@ The command writes one zip per skill to `dist/`.
 Each zip has the skill folder at its root.
 
 The helpers read `hacker-news.firebaseio.com`.
-On claude.ai, allow that domain in the code execution network settings.
-If the domain is blocked, the skills use their fallback paths.
+The claude.ai code execution network blocks that domain by default.
+Add it to the allowed domains:
+
+- Paid individual plans: **Settings > Capabilities**.
+- Team and Enterprise plans: an admin uses **Organization settings > Capabilities**.
+- Free plan: only package managers can be allowed, so the helpers cannot run.
+
+If the domain is blocked, the skills report the error and use their fallback paths.
 
 ### Claude API
 

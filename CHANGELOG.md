@@ -11,6 +11,7 @@
 - `hn-source-review` always reports prior discussion and the search method.
 - `hn-source-review` does not treat age alone as a reason against a source.
 - `hn-source-review` links each related fact outside the source, or leaves it out.
+- `hn-submission-check` has an `Already live` decision for items already on HN and no other undeclared labels.
 
 ## v1.0.2
 

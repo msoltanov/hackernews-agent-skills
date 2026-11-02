@@ -34,7 +34,7 @@ fixable = ["ALL"]
 unfixable = ["ERA001"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["hn_readonly", "hn_thread_context", "validate_skills"]
+known-first-party = ["build_skill_zips", "hn_readonly", "hn_thread_context", "validate_skills"]
 
 [tool.ruff.lint.flake8-quotes]
 inline-quotes = "single"

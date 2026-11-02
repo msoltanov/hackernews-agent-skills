@@ -95,6 +95,31 @@ class SkillMetadataTest(unittest.TestCase):
         self.write_skill('name: sample\ndescription: # no value')
         self.assertTrue(validator.check_skill(self.path))
 
+    def test_description_limit_matches_claude_ai(self) -> None:
+        self.write_skill(f'name: sample\ndescription: {"a" * 200}')
+        self.assertEqual(validator.check_skill(self.path), [])
+        self.write_skill(f'name: sample\ndescription: {"a" * 201}')
+        self.assertTrue(validator.check_skill(self.path))
+
+    def test_xml_tag_in_description_is_rejected(self) -> None:
+        self.write_skill('name: sample\ndescription: Read <source> text.')
+        self.assertTrue(validator.check_skill(self.path))
+
+    def test_reserved_name_word_is_rejected(self) -> None:
+        for name in ('claude-sample', 'anthropic-sample'):
+            with self.subTest(name=name):
+                path = Path(self.directory.name) / name / 'SKILL.md'
+                path.parent.mkdir()
+                path.write_text(
+                    f'---\nname: {name}\ndescription: Valid.\n---\nText.\n',
+                    encoding='utf-8',
+                )
+                self.assertTrue(validator.check_skill(path))
+
+    def test_unknown_frontmatter_key_is_rejected(self) -> None:
+        self.write_skill('name: sample\ndescription: Valid.\nauthor: Someone')
+        self.assertTrue(validator.check_skill(self.path))
+
     def test_main_fails_on_invalid_skill(self) -> None:
         root = Path(self.directory.name)
         skills = root / 'skills'

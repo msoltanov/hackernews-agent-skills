@@ -1,6 +1,6 @@
 ---
 name: hn-source-review
-description: Check a source before someone shares it on Hacker News. Use for provenance, technical claims, duplicate submissions, relevance, and context. Return evidence and research recommendations without submission-ready text.
+description: Review a source before someone shares it on Hacker News. Check provenance, technical claims, duplicates, relevance, and context. Return evidence and advice, not submission-ready text.
 license: MIT
 ---
 # HN source and claim review

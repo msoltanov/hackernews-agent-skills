@@ -1,6 +1,6 @@
 ---
 name: hn-discover
-description: Discover Hacker News threads for reading and human participation. Use for topic searches, reading recommendations, and relevant discussions. Research with official lists and public data. Do not draft or post HN text.
+description: Find Hacker News threads worth reading or joining, from topic searches and official lists. Return links, reading value, and caveats from public data. Do not draft or post HN text.
 license: MIT
 ---
 # HN thread discovery

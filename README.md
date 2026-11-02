@@ -1,6 +1,6 @@
 # Hacker News Agent Skills
 
-Version: `v1.0`.
+Version: `v1.0.0`.
 
 Seven Agent Skills support Hacker News research through public information.
 They find discussions, check sources, assess submissions, identify comment angles, and examine account visibility.
@@ -32,11 +32,51 @@ The human writes, submits, votes, and comments manually.
 
 ## Installation
 
-From the repository root, copy one or more directories from `skills/` into your agent's skills directory.
-Each directory contains a standalone `SKILL.md` with `name` and `description` frontmatter.
+Each directory in `skills/` contains a standalone `SKILL.md` with `name` and `description` frontmatter.
 Each directory also includes the MIT license notice in `LICENSE`.
-Check your host's documentation for its skill directory path.
+Sibling skills and helpers are optional.
+Each skill provides a fallback for a single-directory installation.
+These skills do not provide an HN extension, account integration, or automated posting service.
 
+### Claude Code
+
+Add this repository as a plugin marketplace, then install the `hn-research` plugin:
+
+```text
+/plugin marketplace add msoltanov/hackernews-agent-skills
+/plugin install hn-research@hackernews-agent-skills
+```
+
+Claude Code 2.1.275 or later also accepts one command:
+
+```text
+/plugin install hn-research --marketplace msoltanov/hackernews-agent-skills
+```
+
+### Claude.ai
+
+1. Download the skill zips from the latest GitHub release.
+2. In claude.ai settings, enable code execution.
+3. Upload each zip as a custom skill in the Skills settings.
+
+To build the zips locally, run `python scripts/build_skill_zips.py`.
+The command writes one zip per skill to `dist/`.
+Each zip has the skill folder at its root.
+
+The helpers read `hacker-news.firebaseio.com`.
+On claude.ai, allow that domain in the code execution network settings.
+If the domain is blocked, the skills use their fallback paths.
+
+### Claude API
+
+Upload each skill folder through the Skills API.
+The API code execution container has no network access.
+The helpers cannot run there, so the skills use their fallback paths.
+
+### Other Agent Skills hosts
+
+Copy one or more directories from `skills/` into your agent's skills directory.
+Check your host's documentation for its skill directory path.
 Replace `AGENT_SKILLS_DIR` in this example:
 
 ```sh
@@ -44,10 +84,7 @@ mkdir -p "$AGENT_SKILLS_DIR"
 cp -R skills/* "$AGENT_SKILLS_DIR/"
 ```
 
-Sibling skills and helpers are optional.
-Each skill provides a fallback for a single-directory installation.
 Python is necessary only for the bundled helpers.
-These skills do not provide an HN extension, account integration, or automated posting service.
 
 ## Optional read-only helpers
 
@@ -63,6 +100,7 @@ python skills/hn-discover/scripts/hn_readonly.py item 8863
 python skills/hn-discover/scripts/hn_readonly.py user jl --limit 10
 python skills/hn-comment-suggest/scripts/hn_thread_context.py "https://news.ycombinator.com/item?id=8863" --limit 12 --depth 2
 python scripts/validate_skills.py
+python scripts/build_skill_zips.py
 python -m unittest discover -s scripts -p 'test_*.py' -v
 python -m unittest discover -s skills/hn-discover/scripts -p 'test_*.py' -v
 python -m unittest discover -s skills/hn-comment-suggest/scripts -p 'test_*.py' -v

@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.1
+
+- `hn-discover` reads live HN lists before web search for a recent time window.
+- `hn-discover` runs its helper through code execution where available.
+- `hn-discover` reports helper errors and does not present stale search results as current activity.
+
 ## v1.0.0
 
 - The plugin has an icon, a privacy policy, and support and documentation links.

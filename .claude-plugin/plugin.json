@@ -1,7 +1,7 @@
 {
   "name": "hn-research",
   "displayName": "Hacker News Research Skills",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Seven read-only Agent Skills for Hacker News research: discovery, source checks, submission checks, comment critique, discussion angles, account signals, and digests. No AI-written HN text.",
   "author": {
     "name": "msoltanov",

@@ -1,6 +1,6 @@
 # Hacker News Agent Skills
 
-Version: `v1.0.3`.
+Version: `v1.0.4`.
 
 Seven Agent Skills support Hacker News research through public information.
 They find discussions, check sources, assess submissions, identify comment angles, and examine account visibility.

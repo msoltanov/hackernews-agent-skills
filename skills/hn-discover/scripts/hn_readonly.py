@@ -211,6 +211,15 @@ def render(result: JsonRecord, fmt: str) -> str:
     lines = [header, '', 'Read-only research. Not HN posting text.', '']
     if 'error' in result:
         return '\n'.join([*lines, f'Error: {result["error"]}'])
+    if 'public_karma' in result:
+        lines.extend(
+            [
+                f'- account: {result["username"]}',
+                f'- created: {result["created_utc"] or "?"}',
+                f'- public karma: {result["public_karma"]}',
+                '',
+            ]
+        )
     if 'item' in result:
         objects = [result['item'], *result.get('first_level_replies', [])]
     else:

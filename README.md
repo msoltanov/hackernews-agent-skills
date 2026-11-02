@@ -1,6 +1,6 @@
 # Hacker News Agent Skills
 
-Version: `v1.0.6`.
+Version: `v1.0.7`.
 
 Seven Agent Skills support Hacker News research through public information.
 They find discussions, check sources, assess submissions, identify comment angles, and examine account visibility.
@@ -106,6 +106,7 @@ python skills/hn-discover/scripts/hn_readonly.py item 8863
 python skills/hn-discover/scripts/hn_readonly.py user jl --limit 10
 python skills/hn-comment-suggest/scripts/hn_thread_context.py "https://news.ycombinator.com/item?id=8863" --limit 12 --depth 2
 python scripts/validate_skills.py
+python scripts/check_versions.py
 python scripts/build_skill_zips.py
 python -m unittest discover -s scripts -p 'test_*.py' -v
 python -m unittest discover -s skills/hn-discover/scripts -p 'test_*.py' -v

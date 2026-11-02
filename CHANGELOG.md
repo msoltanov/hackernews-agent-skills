@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.7
+
+- CI and the release workflow check that the manifests, README, CHANGELOG, and tag name one version.
+- `hn-digest` searches for an article title when web fetch refuses its URL, then asks the user for the text.
+- `evals/live-test-log.md` records the claude.ai and Claude Code tests of 2026-11-02.
+
 ## v1.0.6
 
 - The plugin is now `hn-agent-skills`.

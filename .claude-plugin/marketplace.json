@@ -10,7 +10,7 @@
       "name": "hn-agent-skills",
       "source": "./",
       "description": "Seven read-only Agent Skills for Hacker News research. No AI-written HN text.",
-      "version": "1.0.6",
+      "version": "1.0.7",
       "category": "productivity",
       "tags": [
         "hacker-news",

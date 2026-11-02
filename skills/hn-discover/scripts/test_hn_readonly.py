@@ -43,6 +43,17 @@ class TestReadOnlyHelper(unittest.TestCase):
         with self.assertRaises(SystemExit):
             hn.parse_args(['feed', '--limit', '999'])
 
+    def test_user_markdown_includes_karma_and_creation_date(self) -> None:
+        data = {
+            'username': 'alice',
+            'created_utc': '2020-01-01T00:00:00Z',
+            'public_karma': 42,
+            'recent_items': [],
+        }
+        rendered = hn.render(data, 'markdown')
+        self.assertIn('public karma: 42', rendered)
+        self.assertIn('created: 2020-01-01T00:00:00Z', rendered)
+
     def test_json_render(self) -> None:
         self.assertIn('"feed": "top"', hn.render({'feed': 'top', 'items': []}, 'json'))
 

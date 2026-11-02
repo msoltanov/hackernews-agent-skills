@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.4
+
+- The discovery helper's Markdown user output includes the account creation date and public karma.
+
 ## v1.0.3
 
 - `hn-account-health` asks for the account name and does not guess it from search results.

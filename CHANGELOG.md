@@ -5,6 +5,9 @@
 - `hn-account-health` asks for the account name and does not guess it from search results.
 - `hn-account-health` reads the HN API through its helper or code execution before the rate-limited website.
 - `hn-account-health` reports the exact error and method for a failed read.
+- `hn-comment-suggest` writes angles as topic notes, not questions addressed to HN readers.
+- `hn-comment-suggest` links earlier threads and does not cite commenters by username alone.
+- `hn-comment-suggest` uses its helper for thread reads and does not retry a rate-limited website.
 
 ## v1.0.2
 

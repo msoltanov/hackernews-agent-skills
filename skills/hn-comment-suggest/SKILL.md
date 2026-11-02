@@ -89,13 +89,16 @@ Do not treat HN opinions as established facts.
 ### Already discussed
 
 Give 1–3 material discussion points with direct comment permalinks where available.
+If a point comes from an earlier thread, link that thread.
+Do not cite a commenter by username without a permalink.
 
 ### Angles the user can develop
 
 For each of up to three angles, include:
 
 - Angle label: a topic such as latency versus operational complexity.
-- Core idea: one compact note or question without finished comment prose.
+- Core idea: one compact topic note, for example `mention counting: raw links or unique threads`.
+  Do not write questions or sentences addressed to the author or HN readers.
 - Evidence: a link, factual observation without quotation, or `[unverified]`.
 - Novelty: how the angle differs from existing comments, or an explicit unknown.
 - Risk: a fact to check, counterargument, or uncertainty.
@@ -140,6 +143,9 @@ The helper uses only the public [HN API][api], without credentials or posting ca
 It returns the available root, parent chain, and a bounded reply sample.
 If ancestry is incomplete, the root remains unknown.
 Read the linked article separately.
+Use the helper, not the HN website, for thread reads.
+If the HN website returns a rate limit, do not retry.
+Report the limit and continue with the helper output or supplied text.
 API data does not explain every moderation action or guarantee that replies remain open.
 Use normal source research for external article claims.
 

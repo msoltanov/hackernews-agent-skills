@@ -30,13 +30,14 @@ Do not invent sources, HN matches, comments, dates, or current account and threa
 
 1. Get the topic, time window, and purpose: reading, technical evaluation, or possible human participation.
 2. Select relevant pages from the [HN Lists index][lists].
-3. Prefer search or browsing before the optional helper.
-4. Read the original source and relevant discussion, including parent comments.
-5. Separate article claims from discussion claims.
-6. Select material with technical detail, evidence, firsthand experience, or an open question.
-7. Exclude shallow inflammatory material and stale discussions.
-8. Return 3–10 links with their topic, source, value, unknowns, and discovery list.
-9. Label speculation explicitly.
+3. For a recent time window, read live lists first. Use the optional helper if code execution is available, or browse the list pages.
+4. Use web search for older material or topic matches. Search results can be stale, so check each item date.
+5. Read the original source and relevant discussion, including parent comments.
+6. Separate article claims from discussion claims.
+7. Select material with technical detail, evidence, firsthand experience, or an open question.
+8. Exclude shallow inflammatory material and stale discussions.
+9. Return 3–10 links with their topic, source, value, unknowns, and discovery list.
+10. Label speculation explicitly.
 
 Use these list types:
 
@@ -51,8 +52,18 @@ Use these list types:
 - `whoishiring` for the monthly hiring thread, `jobs` for job posts, and `launches` for YC launches.
 - `leaders` and `topcolors` only if relevant to the request.
 
-If a local command-line tool is available, run `python scripts/hn_readonly.py feed --list new --limit 12` from this skill directory.
+If a command line or code execution is available, run the helper from this skill directory:
+
+```sh
+python scripts/hn_readonly.py feed --list new --limit 12
+python scripts/hn_readonly.py feed --list best --limit 12
+```
+
 The helper needs no credentials.
+It reads `hacker-news.firebaseio.com`.
+If the helper fails, report its exact error, for example a blocked network request.
+Then tell the user which lists you could not read.
+Do not present search results as current HN activity.
 If display context matters, check the current HN page.
 
 ## Output schema

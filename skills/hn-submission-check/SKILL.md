@@ -1,6 +1,6 @@
 ---
 name: hn-submission-check
-description: Check a human-planned Hacker News submission for eligibility and policy conflicts. Use for link posts, Ask HN, Show HN, release announcements, and hiring posts. Return readiness checks without writing or rewriting posts.
+description: Check a human-planned Hacker News link post, Ask HN, Show HN, launch, or hiring post for eligibility and policy conflicts. Return readiness checks. Do not write or rewrite posts.
 license: MIT
 ---
 # HN submission check

@@ -25,8 +25,10 @@ jobs:
           python-version: "${{ matrix.python-version }}"
       - name: Validate skill metadata
         run: python scripts/validate_skills.py
-      - name: Test skill validator
+      - name: Test skill validator and zip builder
         run: python -m unittest discover -s scripts -p 'test_*.py' -v
+      - name: Build claude.ai skill zips
+        run: python scripts/build_skill_zips.py --output dist
       - name: Test read-only discovery helper
         run: python -m unittest discover -s skills/hn-discover/scripts -p 'test_*.py' -v
       - name: Test thread-context helper
@@ -55,4 +57,4 @@ jobs:
       - name: Lint Markdown
         run: python -m pymarkdown --config .pymarkdown.json scan --recurse --exclude .venv .
       - name: Lint YAML
-        run: python -m yamllint --strict -c .yamllint.yaml .github/workflows/ci.yml .yamllint.yaml
+        run: python -m yamllint --strict -c .yamllint.yaml .github/workflows/ci.yml .github/workflows/release.yml .yamllint.yaml

@@ -14,6 +14,19 @@ ROOT = Path(__file__).resolve().parent.parent
 NAME = re.compile(r'[a-z0-9]+(?:-[a-z0-9]+)*\Z')
 FIELD = re.compile(r'([a-z][a-z0-9-]*):[ \t]+(.*)\Z')
 CONTROL_CHARACTERS = re.compile(r'[\x00-\x1f\x7f-\x9f]')
+XML_TAG = re.compile(r'<[^>]*>')
+# claude.ai accepts at most 200 description characters; the API accepts 1024.
+DESCRIPTION_LIMIT = 200
+RESERVED_NAME_WORDS = ('anthropic', 'claude')
+ALLOWED_KEYS = {
+    'name',
+    'description',
+    'license',
+    'compatibility',
+    'metadata',
+    'allowed-tools',
+    'dependencies',
+}
 NONSTRING_VALUES = {
     'null',
     '~',
@@ -77,6 +90,8 @@ def check_skill(path: Path) -> list[str]:
             errors.append(f'{path}: unsupported frontmatter line: {raw!r}')
             continue
         key, value = field.groups()
+        if key not in ALLOWED_KEYS:
+            errors.append(f'{path}: unsupported frontmatter key {key!r}')
         if key in metadata:
             errors.append(f'{path}: duplicate frontmatter key {key!r}')
         try:
@@ -87,10 +102,14 @@ def check_skill(path: Path) -> list[str]:
     description = metadata.get('description', '')
     if not NAME.fullmatch(name) or len(name) > 64:
         errors.append(f'{path}: invalid name {name!r}')
+    elif any(word in name for word in RESERVED_NAME_WORDS):
+        errors.append(f'{path}: name {name!r} contains a reserved word')
     elif path.parent.name != name:
         errors.append(f'{path}: name must match directory {path.parent.name!r}')
-    if not 1 <= len(description) <= 1024:
-        errors.append(f'{path}: description length must be 1..1024')
+    if not 1 <= len(description) <= DESCRIPTION_LIMIT:
+        errors.append(f'{path}: description length must be 1..{DESCRIPTION_LIMIT}')
+    elif XML_TAG.search(description):
+        errors.append(f'{path}: description must not contain XML tags')
     return errors
 
 

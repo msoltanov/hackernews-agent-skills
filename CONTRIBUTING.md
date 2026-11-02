@@ -40,7 +40,7 @@ python -m ruff format --check .
 python -m ruff check .
 python -m pyright
 python -m pymarkdown --config .pymarkdown.json scan --recurse --exclude .venv .
-python -m yamllint --strict -c .yamllint.yaml .github/workflows/ci.yml .yamllint.yaml
+python -m yamllint --strict -c .yamllint.yaml .github/workflows/ci.yml .github/workflows/release.yml .yamllint.yaml
 python scripts/validate_skills.py
 python -m unittest discover -s scripts -p 'test_*.py' -v
 python -m unittest discover -s skills/hn-discover/scripts -p 'test_*.py' -v

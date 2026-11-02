@@ -1,6 +1,6 @@
 ---
 name: hn-comment-suggest
-description: Analyze a supplied Hacker News topic, item URL, parent comment, or article. Use for distinct technical discussion angles supported by evidence. Research the source and discussion without drafting, rewriting, or posting HN comments.
+description: Find up to three evidence-backed discussion angles for a Hacker News topic, item, comment, or article. Research the source and thread. Do not draft, rewrite, or post HN comments.
 license: MIT
 ---
 # Hacker News comment angle suggester

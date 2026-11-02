@@ -1,0 +1,14 @@
+{
+  "name": "hn-research",
+  "displayName": "Hacker News Research Skills",
+  "version": "1.0.0",
+  "description": "Seven read-only Agent Skills for Hacker News research: discovery, source checks, submission checks, comment critique, discussion angles, account signals, and digests. No AI-written HN text.",
+  "author": {
+    "name": "msoltanov",
+    "url": "https://github.com/msoltanov"
+  },
+  "homepage": "https://github.com/msoltanov/hackernews-agent-skills",
+  "repository": "https://github.com/msoltanov/hackernews-agent-skills",
+  "license": "MIT",
+  "keywords": ["hacker-news", "research", "agent-skills", "read-only"]
+}

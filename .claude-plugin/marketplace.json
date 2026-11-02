@@ -1,0 +1,22 @@
+{
+  "name": "hackernews-agent-skills",
+  "description": "Read-only Agent Skills for Hacker News research.",
+  "owner": {
+    "name": "msoltanov",
+    "url": "https://github.com/msoltanov"
+  },
+  "plugins": [
+    {
+      "name": "hn-research",
+      "source": "./",
+      "description": "Seven read-only Agent Skills for Hacker News research. No AI-written HN text.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "tags": [
+        "hacker-news",
+        "research",
+        "read-only"
+      ]
+    }
+  ]
+}

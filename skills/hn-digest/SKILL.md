@@ -1,6 +1,6 @@
 ---
 name: hn-digest
-description: Prepare a factual Hacker News reading digest from selected lists and actual discussions. Use for daily or weekly technology, security, open-source, or startup briefs. Produce private research without HN-ready comments or posts.
+description: Prepare a private Hacker News reading digest from selected lists and real discussions, for daily or weekly tech, security, open-source, or startup briefs. No HN-ready comments or posts.
 license: MIT
 ---
 # HN technical reading digest

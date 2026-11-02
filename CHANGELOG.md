@@ -1,7 +1,13 @@
 # Changelog
 
-## v1.0
+## v1.0.0
 
+- The repository is a Claude Code plugin marketplace with the `hn-research` plugin.
+- `scripts/build_skill_zips.py` builds one claude.ai upload zip per skill.
+- A tag workflow attaches the zips to a GitHub release.
+- Skill descriptions fit the 200-character claude.ai limit.
+- Metadata checks reject reserved name words, XML tags, and unknown frontmatter keys.
+- The README gives installation steps for Claude Code, claude.ai, and the Claude API.
 - Each standalone skill includes the complete MIT license notice.
 - The standalone account evaluation checks inspection guidance without live requests.
 - Thread guidance states the two-week and killed-submission closure rules explicitly.

@@ -1,6 +1,6 @@
 ---
 name: hn-comment-review
-description: Evaluate a user's own Hacker News comment for technical substance, relevance, evidence, civility, and guideline conflicts. Use for issue-level critique. Do not write, rewrite, polish, or supply replacement text for HN.
+description: Critique a user's own Hacker News comment for substance, relevance, evidence, civility, and guideline conflicts. Give issue-level feedback only. Do not write or rewrite text for HN.
 license: MIT
 ---
 # HN comment review

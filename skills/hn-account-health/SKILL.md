@@ -1,6 +1,6 @@
 ---
 name: hn-account-health
-description: Investigate public Hacker News account activity, karma, flagged or dead items, deleted posts, and submission visibility. Use for account questions based on public data. Separate observations from speculation without ban evasion or vote manipulation.
+description: Investigate public Hacker News account signals such as karma, flagged or dead items, and submission visibility. Separate observations from speculation. No ban evasion or vote manipulation.
 license: MIT
 ---
 # HN account and moderation diagnostics

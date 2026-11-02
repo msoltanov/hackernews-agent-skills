@@ -59,6 +59,8 @@ See the [Show HN Guidelines][show-hn].
 1. Assess intellectual value beyond marketing or hype.
 2. Check that the URL points to the original source.
 3. Check that the human-written title preserves the factual original unless it is misleading or linkbait.
+   If the user supplies no title, tell them to use the original title as it is, unless it is misleading or linkbait.
+   Do not advise the user to write a new title.
 4. Flag uppercase text, hype, exclamations, needless site names, and gratuitous numbers for human review.
 5. Check duplicates and prior attention.
 6. Treat roughly one year without significant attention as context, not a guaranteed repost deadline.

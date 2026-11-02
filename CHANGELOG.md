@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.3
+
+- `hn-account-health` asks for the account name and does not guess it from search results.
+- `hn-account-health` reads the HN API through its helper or code execution before the rate-limited website.
+- `hn-account-health` reports the exact error and method for a failed read.
+
 ## v1.0.2
 
 - `hn-discover` runs its helper from the skill directory, not the working directory.

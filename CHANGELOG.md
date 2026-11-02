@@ -3,7 +3,9 @@
 ## v1.0.7
 
 - CI and the release workflow check that the manifests, README, CHANGELOG, and tag name one version.
-- `hn-digest` searches for an article title when web fetch refuses its URL, then asks the user for the text.
+- `hn-digest` searches for an article title when web fetch refuses its URL and labels news reports as secondary sources.
+- `hn-digest` lists stories with unread originals under `Needs article text` and asks the user for the text.
+- `hn-digest` uses third-party HN digests only to find candidate items, never as evidence.
 - `evals/live-test-log.md` records the claude.ai and Claude Code tests of 2026-11-02.
 
 ## v1.0.6

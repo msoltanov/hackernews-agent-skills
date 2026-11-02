@@ -8,7 +8,7 @@ Raw conversation output is not committed.
 ## 2026-11-02: claude.ai and Claude Code
 
 - Host: claude.ai web, with code execution.
-  The model was not recorded.
+- Model: Claude Sonnet 5.5, medium effort, as reported by the maintainer.
 - Network: the claude.ai egress proxy blocked `hacker-news.firebaseio.com` until the maintainer allowed the domain under **Settings > Capabilities**.
 - Inputs: live HN lists, public Show HN and essay URLs, and the maintainer's own HN account.
   Account details are not recorded here.
@@ -22,7 +22,8 @@ Raw conversation output is not committed.
 | `hn-discover` | v1.0.1 | Fail | The helper ran, but the egress proxy blocked the API. It first ran from the wrong directory. | v1.0.2 |
 | `hn-discover` | v1.0.2 | Pass | Read live `best`, `top`, and `new` lists. Read metadata only and said so. | — |
 | `hn-comment-review` | v1.0.2 | Pass | It treated thread age as the only closure check. Minor gap, no change. | — |
-| `hn-digest` | v1.0.2 | Pass | Web fetch refused every article URL, so source checks were not done. The skill disclosed this. | v1.0.7, not yet retested |
+| `hn-digest` | v1.0.2 | Pass | Web fetch refused every article URL, so source checks were not done. The skill disclosed this. | v1.0.7 |
+| `hn-digest` | v1.0.7 draft | Partial | Title search found secondary reports, but no originals. It did not ask for article text, and it used a third-party HN digest as a data source. | v1.0.7 |
 | `hn-account-health` | v1.0.2 | Fail | Read the API through web fetch, hit the website rate limit, and may have guessed the account. | v1.0.3 |
 | `hn-account-health` | v1.0.3 | Pass | Asked for the account and read the API through the helper. Karma and age were missing from helper output. | v1.0.4, not yet retested |
 | `hn-comment-suggest` | v1.0.2 | Fail | Angles were paste-ready questions. Earlier commenters had no permalinks. It retried a rate-limited website. | v1.0.3 |
@@ -43,6 +44,6 @@ Raw conversation output is not committed.
 ### Open retests
 
 - `hn-account-health`: check that karma and the creation date appear (v1.0.4).
-- `hn-digest`: check the title-search fallback when web fetch refuses an article URL (v1.0.7).
+- `hn-digest`: check that it labels secondary reports, lists `Needs article text`, and uses no third-party digest as evidence (v1.0.7).
 - `hn-submission-check`: check the `Already live` decision with an item already on HN.
 - `hn-source-review`: check the age and link rules with a source older than one year.

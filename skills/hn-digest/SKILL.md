@@ -31,10 +31,13 @@ Do not invent sources, HN matches, comments, dates, or current account and threa
 2. If filters are absent, cover systems, security, languages, infrastructure, AI, startups, and unusual discoveries.
 3. If earlier digests are available, avoid repeated stories.
 4. Select relevant links from `newest`, `best`, `active`, `shownew`, `asknew`, `bestcomments`, `highlights`, and `pool`.
+   Third-party HN digests and summaries can suggest candidate items only.
+   Confirm each item on HN or through the official API, and never cite a digest summary as evidence.
 5. Distinguish submission, publication, and update dates.
 6. Check each story against its original source.
-   If web fetch refuses an article URL, search for the article title and fetch the URL from the search result.
-   If that also fails, ask the user to paste the article text or URL, and mark the story unverified.
+   If web fetch refuses an article URL, search for the article title and fetch the original URL from the search result.
+   A news report about the article is a secondary source. Label it as secondary, not as the original.
+   If you cannot read the original, mark the story unverified and list it under `Needs article text`.
 7. If you describe reader responses, read the discussion.
 8. Separate article claims, individual opinions, and independently supported facts.
 9. Rank informational value, novelty, evidence quality, and technical relevance.
@@ -53,6 +56,8 @@ See the [HN Lists index][lists].
 `Story | HN thread URL | Original source | Published / HN date | Technical takeaway | Evidence caveat | Further research question`
 
 End with `One deeper read` and explain the value of a source for focused study.
+If you could not read any original source, add `Needs article text` after it.
+List each such story and ask the user to paste the article text.
 See the [HN Welcome page][welcome] and [HN FAQ][faq].
 
 [guidelines]: https://news.ycombinator.com/newsguidelines.html

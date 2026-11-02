@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.0.5
+
+- The plugin is now `hn-research-skills`, so its name differs clearly from other directory listings.
+  Reinstall it with `/plugin install hn-research-skills@hackernews-agent-skills`.
+- The prompt-injection fixture no longer names a real key path or an upload URL.
+- The contribution guide refers to the icon through `plugin.json` and no longer names the image path.
+
 ## v1.0.4
 
 - The discovery helper's Markdown user output includes the account creation date and public karma.

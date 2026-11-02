@@ -85,7 +85,8 @@ claude plugin validate .claude-plugin/marketplace.json --strict
 
 The zip build writes one claude.ai upload zip per skill to `dist/`.
 Each skill description must have 200 characters or less.
-The plugin icon is `assets/icon.png`, a square PNG of 1024 pixels.
+The `icon` field in `.claude-plugin/plugin.json` sets the plugin icon.
+The icon is a square PNG of 1024 pixels.
 
 ## Releases
 

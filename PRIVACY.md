@@ -1,6 +1,6 @@
 # Privacy
 
-This policy covers the `hn-research` plugin and the seven skills in this repository.
+This policy covers the `hn-research-skills` plugin and the seven skills in this repository.
 The project checked it on 2026-11-02.
 
 ## Data collection

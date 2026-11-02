@@ -1,6 +1,6 @@
 # Hacker News Agent Skills
 
-Version: `v1.0.4`.
+Version: `v1.0.5`.
 
 Seven Agent Skills support Hacker News research through public information.
 They find discussions, check sources, assess submissions, identify comment angles, and examine account visibility.
@@ -40,17 +40,17 @@ These skills do not provide an HN extension, account integration, or automated p
 
 ### Claude Code
 
-Add this repository as a plugin marketplace, then install the `hn-research` plugin:
+Add this repository as a plugin marketplace, then install the `hn-research-skills` plugin:
 
 ```text
 /plugin marketplace add msoltanov/hackernews-agent-skills
-/plugin install hn-research@hackernews-agent-skills
+/plugin install hn-research-skills@hackernews-agent-skills
 ```
 
 Claude Code 2.1.275 or later also accepts one command:
 
 ```text
-/plugin install hn-research --marketplace msoltanov/hackernews-agent-skills
+/plugin install hn-research-skills --marketplace msoltanov/hackernews-agent-skills
 ```
 
 ### Claude.ai

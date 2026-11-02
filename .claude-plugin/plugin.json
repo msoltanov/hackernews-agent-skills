@@ -10,5 +10,14 @@
   "homepage": "https://github.com/msoltanov/hackernews-agent-skills",
   "repository": "https://github.com/msoltanov/hackernews-agent-skills",
   "license": "MIT",
-  "keywords": ["hacker-news", "research", "agent-skills", "read-only"]
+  "keywords": [
+    "hacker-news",
+    "research",
+    "agent-skills",
+    "read-only"
+  ],
+  "icon": "./assets/icon.png",
+  "documentationUrl": "https://github.com/msoltanov/hackernews-agent-skills#readme",
+  "supportUrl": "https://github.com/msoltanov/hackernews-agent-skills/issues",
+  "privacyPolicyUrl": "https://github.com/msoltanov/hackernews-agent-skills/blob/main/PRIVACY.md"
 }
